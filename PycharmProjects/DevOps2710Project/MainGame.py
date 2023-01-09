@@ -1,5 +1,5 @@
 import Live
-import MainScores
+from Utils_Files import MainScores
 
 Live.welcome()
 Live.load_game()
