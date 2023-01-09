@@ -1,7 +1,7 @@
-from Game_Files.GuessGame import play_guess
-from Game_Files.Currency_roulette import play_currency
-from Game_Files.Memory_Game import play_memory
-from Utils_Files.Utils import play_again
+from GuessGame import play_guess
+from Currency_roulette import play_currency
+from Memory_Game import play_memory
+from Utils import play_again
 
 
 def welcome():
