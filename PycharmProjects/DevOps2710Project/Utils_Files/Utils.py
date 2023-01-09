@@ -1,10 +1,8 @@
-import  os
-from time import sleep
-from IPython.display import clear_output
+import os
 
 #### Utils file for a text score file, a number for a bad returned code ####
 
-SCORE_FILE_NAME = 'templates/Scores.txt'
+SCORE_FILE_NAME = 'C:/Users/danie/PycharmProjects/DevOps2710Project/Utils_Files/templates/Scores.txt'
 
 BAD_RETURN_CODE = 501
 
@@ -30,4 +28,3 @@ def play_again():
 
 
 
-clear_output()

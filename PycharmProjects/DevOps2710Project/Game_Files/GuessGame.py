@@ -1,5 +1,5 @@
 import random
-
+from Utils_Files.Score import add_score
 
 
 def generate_number(game_difficulty_choice):
@@ -39,7 +39,6 @@ def compare_results(secret_number, user_guess):
 
 def play_guess(game_difficulty_choice):
     """A function that calls the other functions to play the game"""
-    from Score import add_score
     secret_number = generate_number(game_difficulty_choice)
     user_guess = get_guess_from_user()
     if compare_results(secret_number, user_guess):

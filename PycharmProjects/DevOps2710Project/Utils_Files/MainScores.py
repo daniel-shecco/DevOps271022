@@ -1,13 +1,12 @@
 from flask import Flask, render_template
-import Score
-import Utils
+from Utils_Files.Utils import SCORE_FILE_NAME, BAD_RETURN_CODE
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def score_server():
-    f = open(Utils.SCORE_FILE_NAME)
+    f = open(SCORE_FILE_NAME)
     score = f.read()
 
     return render_template('scores.html', score=score)
@@ -15,7 +14,7 @@ def score_server():
 
 @app.route('/')
 def error():
-    with open(Utils.BAD_RETURN_CODE, 'r') as error:
+    with open(BAD_RETURN_CODE, 'r') as error:
         e = error.read()
 
     return render_template('scores.html', error=e)

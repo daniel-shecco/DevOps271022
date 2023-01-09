@@ -1,6 +1,7 @@
 import random
 import time
-from Utils import screen_cleaner
+from Utils_Files.Utils import screen_cleaner
+from Utils_Files.Score import add_score
 
 #### Create a sequence list ####
 sequence_list = []
@@ -15,7 +16,7 @@ in the previous step, shows them to the user and disappear after 0.7 seconds """
 
         sequence = random.sample(sequence_list, game_difficulty_choice)
 
-        # print(sequence)
+        print(sequence)
         time.sleep(0.7)
         print("\n time is up\n\n\n\n")
         screen_cleaner()
@@ -58,7 +59,6 @@ def is_list_equal(sequence, user_list):
 
 def play_memory(game_difficulty_choice):
         """A function that calls the other functions to play the game"""
-        from Score import add_score
         sequence = generate_sequence(game_difficulty_choice)
         user_list = get_list_from_user()
 

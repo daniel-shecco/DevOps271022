@@ -1,5 +1,6 @@
 import requests
 import random
+from Utils_Files.Score import add_score
 
 """ Create a random range for the amount parameter of the currency API """
 random_currency_number = random.randrange(1, 100)
@@ -43,7 +44,6 @@ def get_guess_from_user(game_difficulty_choice):
 
 def play_currency(game_difficulty_choice):
     """A function to play the game"""
-    from Score import add_score
     if get_guess_from_user(game_difficulty_choice):
 
         print('You Win!')
